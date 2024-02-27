@@ -1,0 +1,36 @@
+.work {
+	&__banner {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+		grid-auto-rows: 1fr;
+		grid-template-columns: 29.48fr 20.94fr 11.04fr 34.58fr 3.96fr;
+		grid-template-rows: 0.75fr 11.25fr 63.13fr 24.88fr;
+		gap: 0px 0px;
+
+		&__media {
+			&--background {
+				grid-area: 1 / 1 / 5 / 6;
+				z-index: 1;
+			}
+			&--vinyl {
+				grid-area: 2 / 2 / 4 / 4;
+				z-index: 2;
+			}
+			&--arm {
+				grid-area: 3 / 3 / 5 / 5;
+				z-index: 3;
+				pointer-events: none;
+			}
+
+			&__image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__audio {
+		}
+	}
+}

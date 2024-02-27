@@ -1,0 +1,72 @@
+:root {
+	--variable: 0px;
+	--backgroundColor: transparent;
+}
+
+html {
+	// This defines what 1rem is @ 10px -- 10px/16px = 62.5%
+	font-size: 62.5%;
+
+	@include media-down(tmd) {
+		font-size: 56.25%; // 1rem = 9px, 9/16px = 56.25%
+	}
+
+	@include media-down(tsm) {
+		font-size: 50%; // 1rem = 8px, 8/16px = 50%
+	}
+
+	@include media-up(bdsm) {
+		font-size: 75%; // 1rem = 12px, 12/16px = 75%
+	}
+}
+
+body {
+	position: relative;
+	overscroll-behavior-y: none;
+	overflow-x: hidden;
+
+	&.overflow {
+		overflow: hidden;
+	}
+
+	&.page-changing {
+		pointer-events: none;
+
+		a {
+			pointer-events: none !important;
+		}
+	}
+
+	// EXAMPLE OF MIXIN CODE FOR CUSTOM SCROLLBAR IMPLEMENTATION
+	// @include scrollbars(8px, $c_earth-yellow, $c_champagne);
+}
+
+// SETS LINKS TO INHERIT THESE PROPERTIES FROM THEIR PARENT DIVS
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+p {
+	text-align: center;
+
+	strong {
+		font-family: $f_equip-bold;
+		font-weight: bold;
+	}
+}
+
+.site {
+	overflow: hidden !important;
+}
+
+figure {
+	margin: 0;
+}
+
+// CODE TO CHANGE THE COLOUR OF TEXT SELECTION
+
+// ::selection {
+// color: $c_white;
+// background-color: $c_black;
+// }

@@ -1,0 +1,105 @@
+$z_tablecloth: 1;
+$z_loops-multi: 2;
+$z_egg-shell: 3;
+$z_loops-single: 4;
+$z_egg-cup: 5;
+
+.collage {
+	&__egg-loops {
+		position: relative;
+		z-index: 10;
+		display: grid;
+		grid-template-columns: 5.04fr 7.97fr 1.35fr 0.68fr 3.07fr 2.4fr 2.4fr 2.5fr 0.57fr 3.28fr 1.51fr 0.57fr 2.08fr 2.71fr 5.42fr 4.22fr 4.84fr;
+		grid-template-rows: 18.52fr 3.06fr 0.93fr 4.07fr 5.28fr 2.96fr 1.85fr 2.41fr 1.85fr 0.65fr 4.35fr 4.07fr 15.65fr 34.35fr;
+		justify-items: center;
+
+		@include media-up(tmd) {
+			grid-template-columns: 30.26fr 7.97fr 1.35fr 0.68fr 3.07fr 2.4fr 2.4fr 2.5fr 0.57fr 3.28fr 1.51fr 0.57fr 2.08fr 2.71fr 5.42fr 4.22fr 29.01fr;
+		}
+
+		&__sticker {
+			position: absolute;
+			height: 10rem;
+			width: auto;
+			top: 0;
+			right: -40%;
+
+			@include media-up(plg) {
+				height: 15rem;
+				right: -20%;
+			}
+
+			@include media-up(tmd) {
+				top: -5%;
+				right: -10%;
+			}
+
+			@include media-up(tlg) {
+				height: 20rem;
+				top: -10%;
+				right: -15%;
+			}
+
+			@include media-up(dsm) {
+				height: 25rem;
+			}
+		}
+
+		&__media {
+			&--tablecloth {
+				grid-area: 1 / 1 / -1 / -1;
+				z-index: $z_tablecloth;
+			}
+
+			&--egg-cup {
+				grid-area: 3 / 2 / -1 / 17;
+				z-index: $z_egg-cup;
+				position: relative;
+			}
+
+			&--egg-shell {
+				grid-area: 3 / 5 / 9 / 16;
+				z-index: $z_egg-shell;
+				// opacity: 0;
+				// visibility: hidden;
+			}
+
+			&--fruit-loops {
+				grid-area: 2 / 3 / 14 / 16;
+				z-index: $z_loops-multi;
+			}
+
+			&--green-loop {
+				grid-area: 8 / 6 / 12 / 8;
+				z-index: $z_loops-single;
+			}
+
+			&--yellow-loop {
+				grid-area: 4 / 7 / 6 / 9;
+				z-index: $z_loops-single;
+			}
+
+			&--pink-loop {
+				grid-area: 5 / 13 / 7 / 15;
+				z-index: $z_loops-single;
+			}
+
+			&--purple-loop {
+				grid-area: 11 / 11 / 13 / 14;
+				z-index: $z_loops-single;
+			}
+
+			&--blue-loop {
+				grid-area: 6 / 10 / 10 / 12;
+				z-index: $z_loops-single;
+			}
+
+			&__image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+		}
+	}
+}

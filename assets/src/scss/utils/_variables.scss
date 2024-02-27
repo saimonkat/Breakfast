@@ -1,0 +1,72 @@
+// Naming Convention Guide
+
+// $f_ font and webfont families
+// $c_ color codes
+// $z_ z-indices used throughout the application
+// $t_ animation timings
+// $b_ responsive breakpoints
+
+// // FONTS
+// $f_arial: Arial, Helvetica, sans-serif
+
+// // COLORS
+// $c_red: #FF0000;
+// $c_black: #000;
+
+// // Z-INDICIES
+// $z_index_back: -1;
+// $z_index_base: 1;
+// $z_index_max: 9999;
+
+// // ANIMATION TIMINGS
+// $t_medium_animation: 200ms;
+
+// // BREAKPOINTS
+// $b_mobile: 700px;
+// $b_desktop: 1200px;
+
+// Media queries
+$grid-breakpoints: (
+	zero: 0,
+	psm: 300px,
+	pmd: 375px,
+	plg: 425px,
+	tsm: 576px,
+	tmd: 768px,
+	tlg: 992px,
+	dsm: 1200px,
+	dmd: 1440px,
+	dlg: 1660px,
+	bdsm: 1800px,
+);
+
+// COLOURS
+$c_white: #ffffff;
+$c_black: #000000;
+$c_grey: #707070;
+$c_yolk: #ffde30;
+
+// GRADIENTS
+$g_blue-light: #afcbe3;
+$g_blue-dark-1: #6a9bc8;
+$g_blue-dark-2: #8aa4d2;
+$g_lavender: #a3b2db;
+$g_pink-light: #d7bcd9;
+$g_pink-dark: #e89d9f;
+$g_orange-light: #f28658;
+$g_orange-dark: #fd7f2a;
+$g_macaroni-and-cheese: #fdb384;
+$g_pastel-pink: #e9abb0;
+
+// FONT
+$f_default-size: 1.6rem;
+$f_minion: "MinionPro-Regular", Arial, sans-serif;
+$f_bncalifone: "BNCalifoneRegular", Arial, sans-serif;
+$f_equip-thin: "Equip-Thin", Arial, sans-serif;
+$f_equip-light: "Equip-Light", Arial, sans-serif;
+$f_equip-regular: "Equip-Regular", Arial, sans-serif;
+$f_equip-medium: "Equip-Medium", Arial, sans-serif;
+$f_equip-bold: "Equip-Bold", Arial, sans-serif;
+$f_equip-black: "Equip-Black", Arial, sans-serif;
+
+$gradient-directory: "../images/icons";

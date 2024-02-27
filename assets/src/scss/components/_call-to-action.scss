@@ -1,0 +1,13 @@
+.cta {
+	display: grid;
+	justify-items: center;
+	row-gap: 1rem;
+
+	&__heading {
+		@extend %title-40;
+	}
+	&__email {
+		@extend %body-40-reg;
+		text-transform: lowercase;
+	}
+}

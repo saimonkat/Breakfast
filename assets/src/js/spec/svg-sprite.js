@@ -1,0 +1,11 @@
+import "@icons/breakfast_egg_icon_W_1.svg";
+import "@icons/breakfast_egg_icon_W.svg";
+import "@icons/breakfast_icon_K.svg";
+import "@icons/breakfast_icon_W.svg";
+import "@icons/breakfast_wordmark_K.svg";
+import "@icons/breakfast_wordmark_W.svg";
+import "@icons/instagram-logo.svg";
+import "@icons/linkedin-logo.svg";
+import "@icons/vimeo-logo.svg";
+import "@icons/wave-linear-top.svg";
+import "@icons/wave-linear-bottom.svg";

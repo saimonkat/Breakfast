@@ -1,0 +1,57 @@
+.home__wave-block {
+	position: relative;
+	z-index: 1;
+}
+.home {
+	&__wave {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-columns: 1fr;
+		align-items: center;
+		justify-items: center;
+
+		&__wrapper {
+			grid-area: 1 / 1 / -1 / -1;
+			min-width: 100%;
+			display: grid;
+			justify-items: center;
+
+			@include media-up(tmd) {
+				display: block;
+				justify-items: unset;
+			}
+
+			svg {
+				display: block;
+				width: 250%;
+				height: auto;
+
+				@include media-up(tsm) {
+					width: 150%;
+				}
+
+				@include media-up(tmd) {
+					width: 115%;
+				}
+
+				@include media-up(tlg) {
+					width: 100%;
+				}
+
+				@include media-up(dsm) {
+					width: 115%;
+				}
+			}
+		}
+		&__content {
+			grid-area: 1 / 1 / -1 / -1;
+			z-index: 10;
+			color: $c_black;
+			@extend %body-waves;
+			max-width: 80vw;
+			margin: 5rem auto 0;
+			padding-bottom: 2rem;
+			@include break-down(tsm);
+		}
+	}
+}

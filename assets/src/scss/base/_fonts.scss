@@ -1,0 +1,54 @@
+@import "../utils/mixins";
+$font-directory: "../fonts";
+
+@include font(
+	$font_directory,
+	"Minion",
+	"MinionPro-Regular",
+	"normal",
+	"normal"
+);
+@include font(
+	$font_directory,
+	"Califone",
+	"BNCalifoneRegular",
+	"normal",
+	"normal"
+);
+@include font($font_directory, "Equip-Thin", "Equip-Thin", 100, "normal");
+@include font($font_directory, "Equip-Light", "Equip-Light", 300, "normal");
+@include font(
+	$font_directory,
+	"Equip-Regular",
+	"Equip-Regular",
+	normal,
+	"normal"
+);
+@include font($font_directory, "Equip-Medium", "Equip-Medium", 500, "normal");
+@include font($font_directory, "Equip-Bold", "Equip-Bold", bold, "normal");
+@include font($font_directory, "Equip-Black", "Equip-Black", 900, "normal");
+
+body {
+	font-family: $f_equip-regular;
+	color: $c_white;
+}
+
+// FOR CRISPER RENDERING OF FONTS
+
+@supports (text-rendering: geometricPrecision) {
+	body {
+		text-rendering: geometricPrecision;
+	}
+}
+
+@supports (-webkit-font-smoothing: antialiased) {
+	body {
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+@supports (-moz-osx-font-smoothing: grayscale) {
+	body {
+		-moz-osx-font-smoothing: grayscale;
+	}
+}

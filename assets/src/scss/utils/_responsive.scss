@@ -1,0 +1,140 @@
+// MEDIA QUERY MANAGER
+
+/*
+0 - 375px:      Normal styles apply for tiny phones
+376 - 575px:    Larger Phones
+576 - 767px:    Phablets + Landscape Phones
+768 - 991px:    Portrait Tablets
+992 - 1199px:   Landscape Tablets
+1200 - 1800:    Desktops
+1800px+:        Super Screens
+
+MOBILE FIRST
+$breakpoint argument choices
+- m-phone-tiny
+- m-phone
+- m-phone-lg
+- m-phablet
+- m-tab-port
+- m-tab-land
+- m-desktop
+- m-desktop-lg
+- m-desktop-xl
+- m-superscreen
+
+DESKTOP FIRST
+$breakpoint argument choices
+- d-phone
+- d-phablet
+- d-tab-port
+- d-tab-land
+
+ORDER: Base + Typography > general layout + grid > page layout > components 
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == m-phone-tiny {
+		@media only screen and (min-width: 18.75em) {
+			// 300px
+			@content;
+		}
+	}
+	@if $breakpoint == m-phone {
+		@media only screen and (min-width: 23.4375em) {
+			// 375px
+			@content;
+		}
+	}
+
+	@if $breakpoint == m-phone-lg {
+		@media only screen and (min-width: 28.125em) {
+			// 450px
+			@content;
+		}
+	}
+
+	@if $breakpoint == m-phablet {
+		@media only screen and (min-width: 36em) {
+			// 576px
+			@content;
+		}
+	}
+
+	@if $breakpoint == m-tab-port {
+		@media only screen and (min-width: 48em) {
+			// 768px
+			@content;
+		}
+	}
+
+	@if $breakpoint == m-tab-land {
+		@media only screen and (min-width: 62em) {
+			// 992px
+			@content;
+		}
+	}
+
+	@if $breakpoint == m-desktop {
+		@media only screen and (min-width: 75em) {
+			// 1200px+
+			@content;
+		}
+	}
+
+	@if $breakpoint == m-desktop-lg {
+		@media only screen and (min-width: 87.5em) {
+			// 1400px+
+			@content;
+		}
+	}
+	@if $breakpoint == m-desktop-xl {
+		@media only screen and (min-width: 100em) {
+			// 1600px+
+			@content;
+		}
+	}
+
+	@if $breakpoint == m-superscreen {
+		@media only screen and (min-width: 112.5em) {
+			// 1800px+
+			@content;
+		}
+	}
+
+	@if $breakpoint == d-phone {
+		@media only screen and (max-width: 25em) {
+			// 400px
+			@content;
+		}
+	}
+
+	@if $breakpoint == d-phablet {
+		@media only screen and (max-width: 37.5em) {
+			// 600px
+			@content;
+		}
+	}
+
+	@if $breakpoint == d-tab-port {
+		@media only screen and (max-width: 56.25em) {
+			// 900px
+			@content;
+		}
+	}
+
+	@if $breakpoint == d-tab-land {
+		@media only screen and (max-width: 75em) {
+			// 1200px
+			@content;
+		}
+	}
+
+	@if $breakpoint == d-superscreen {
+		@media only screen and (max-width: 112.5em) {
+			// 1800px+
+			@content;
+		}
+	}
+}

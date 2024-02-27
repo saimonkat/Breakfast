@@ -1,0 +1,28 @@
+.follow-us {
+	position: relative;
+	z-index: 10;
+	display: grid;
+	justify-items: center;
+	row-gap: 2rem;
+	padding: 7.5rem 0;
+
+	&__heading {
+		@extend %title-40;
+		text-transform: lowercase;
+	}
+
+	&__links {
+		display: grid;
+		grid-template-columns: repeat(3, min-content);
+		column-gap: 2rem;
+	}
+
+	&__link {
+		&__icon {
+			&__svg {
+				height: 3rem;
+				width: 3rem;
+			}
+		}
+	}
+}

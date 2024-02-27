@@ -1,0 +1,189 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes rotate {
+	0%,
+	50% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(30deg);
+	}
+	75% {
+		transform: rotate(-35deg);
+	}
+}
+
+@keyframes rotate-1 {
+	0%,
+	50% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-40deg);
+	}
+	75% {
+		transform: rotate(40deg);
+	}
+}
+
+@keyframes rotate-2 {
+	0%,
+	50% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(20deg);
+	}
+	75% {
+		transform: rotate(-20deg);
+	}
+}
+
+@keyframes rotate-3 {
+	0%,
+	50% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(20deg);
+	}
+	75% {
+		transform: rotate(-20deg);
+	}
+}
+
+@keyframes flicker {
+	0%,
+	10%,
+	20%,
+	30%,
+	40%,
+	99% {
+		opacity: 0;
+	}
+	5%,
+	15%,
+	25%,
+	35%,
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes balloonFlight {
+	0% {
+		opacity: 0;
+		transform: translate(-14vw, 0);
+	}
+	22% {
+		opacity: 1;
+		transform: translate(-10.5vw, 2vw);
+	}
+	28% {
+		transform: translate(-10vw, 2vw);
+	}
+	47% {
+		transform: translate(-7vw, -2vw);
+	}
+	52% {
+		transform: translate(-6.5vw, -2vw);
+	}
+	72% {
+		transform: translate(-3.5vw, 2vw);
+	}
+	77% {
+		transform: translate(-3vw, 2vw);
+	}
+	99%,
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes balloonJumps {
+	0%,
+	100% {
+		transform: none;
+	}
+	25% {
+		transform: translateY(-20px);
+	}
+	75% {
+		transform: translateY(20px);
+	}
+}
+
+@keyframes eggAnim {
+	0% {
+		transform: scale(2);
+	}
+	10% {
+		transform: scale(1.93);
+	}
+	20% {
+		transform: scale(1.8);
+	}
+	30% {
+		transform: scale(1.53);
+	}
+	40% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-24.7vw) scale(1);
+		opacity: 0;
+	}
+}
+
+@keyframes logoAnim {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes rotate-partial {
+	0% {
+		transform: rotate(0deg);
+	}
+	5% {
+		transform: rotate(5deg);
+	}
+	10% {
+		transform: rotate(0deg);
+	}
+	15% {
+		transform: rotate(-5deg);
+	}
+	20% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

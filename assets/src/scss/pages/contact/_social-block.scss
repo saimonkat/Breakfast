@@ -1,0 +1,19 @@
+.contact {
+	&__social-block {
+		&__ticker {
+			color: $c_white;
+			background-color: $c_black;
+		}
+		&__instagram {
+			display: flex;
+			justify-content: space-evenly;
+			padding: 2rem 0;
+
+			&__temp {
+				height: 23vw;
+				width: 23vw;
+				background-color: $g_blue-dark-1;
+			}
+		}
+	}
+}

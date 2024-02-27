@@ -1,0 +1,59 @@
+.ticker-slider {
+	display: flex;
+
+	&--vertical {
+		flex-direction: column;
+	}
+	&--horizontal {
+		padding: 2rem 0;
+		// margin: 2rem 0;
+	}
+
+	&__wrapper {
+		max-width: 100vw;
+		overflow: hidden;
+
+		&--vertical {
+			display: grid;
+			justify-items: center;
+			@extend %title-90;
+			color: $c_white;
+			position: relative;
+			z-index: 10;
+			max-height: 20vh;
+			overflow: hidden;
+
+			@include media-up(tmd) {
+				max-height: 26vh;
+			}
+
+			@include media-up(tlg) {
+				max-height: 40vh;
+			}
+		}
+	}
+
+	&__item {
+		display: block;
+		&--vertical {
+		}
+		&--horizontal {
+			width: auto;
+			display: inline-block;
+			white-space: nowrap;
+			margin-right: 2.5rem;
+		}
+	}
+
+	&__group {
+	}
+
+	&__text {
+		&--vertical {
+			@extend %title-90;
+		}
+		&--horizontal {
+			@extend %title-40;
+		}
+	}
+}

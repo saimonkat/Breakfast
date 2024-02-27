@@ -1,0 +1,120 @@
+.page__contact {
+	overflow: hidden;
+}
+
+.contact {
+	&__text-scroll {
+		position: relative;
+		height: 100%;
+		padding: 20rem 0;
+		background-image: linear-gradient(135deg, $g_blue-dark-1, $g_blue-dark-2);
+
+		@include media-up(tmd) {
+			padding: 15rem 0 25rem;
+		}
+		@include media-up(dsm) {
+			padding: 15rem 0 35rem;
+		}
+	}
+	&__wave-block {
+		margin-top: -40%;
+		margin-bottom: -40%;
+
+		@include media-up(tmd) {
+			margin-top: -22%;
+			margin-bottom: -22%;
+		}
+
+		@include media-up(dlg) {
+			margin-top: -18%;
+		}
+	}
+	&__collage-block {
+		position: relative;
+		min-height: 100vh;
+		background-image: linear-gradient(
+			150deg,
+			$g_lavender,
+			$g_pink-light,
+			$g_pink-dark
+		);
+	}
+	&__collage {
+		&__cta {
+			padding-top: 25rem;
+			@include media-up(tmd) {
+				padding-top: 35rem;
+			}
+		}
+	}
+}
+
+.animated-text {
+	&__content {
+	}
+}
+
+.collage {
+	&__fruit {
+		display: grid;
+		grid-template-columns: 0.86fr 12.19fr 4.86fr 10.67fr 16fr 7.24fr 8.1fr 8.57fr 3.24fr 4.76fr 2.95fr 4.86fr 1.43fr 10.38fr 0.76fr 3.14fr;
+		grid-template-rows: 30fr 13.87fr 0.85fr 9.93fr 2.56fr 7.26fr 4.8fr 4.27fr 6.19fr 4.27fr 13.13fr 1.92fr 11.85fr 3.2fr 15.9fr;
+		grid-auto-columns: 1fr;
+		grid-auto-rows: 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: column;
+		position: relative;
+		z-index: 10;
+		overflow: hidden;
+
+		@include media-up(tlg) {
+			grid-template-rows: 10fr 13.87fr 0.85fr 9.93fr 2.56fr 7.26fr 4.8fr 4.27fr 6.19fr 4.27fr 13.13fr 1.92fr 11.85fr 3.2fr 15.9fr;
+		}
+
+		&__media {
+			&--cherries-1 {
+				grid-area: 6 / 3 / 9 / 5;
+				z-index: 2;
+			}
+			&--cherries-2 {
+				grid-area: 10 / 1 / 14 / 4;
+				z-index: 3;
+			}
+			&--banana {
+				grid-area: 5 / 1 / 16 / 8;
+				z-index: 4;
+			}
+			&--counter {
+				grid-area: 12 / 7 / 16 / 17;
+				margin-bottom: -5%;
+				z-index: 5;
+			}
+			&--segment-1 {
+				grid-area: 2 / 6 / 4 / 9;
+			}
+			&--segment-2 {
+				grid-area: 3 / 10 / 6 / 13;
+			}
+			&--segment-3 {
+				grid-area: 6 / 13 / 8 / 16;
+			}
+			&--segment-4 {
+				grid-area: 7 / 7 / 13 / 12;
+				z-index: 3;
+			}
+			&--segment-5 {
+				grid-area: 11 / 11 / 15 / 15;
+				z-index: 2;
+			}
+			&--segment-6 {
+				grid-area: 14 / 7 / 16 / 9;
+			}
+		}
+
+		&__image {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}

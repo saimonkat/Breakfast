@@ -1,0 +1,70 @@
+%title-20 {
+	font-size: 1.6rem;
+	font-family: $f_equip-medium;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	@include media-up(tmd) {
+		font-size: 1.4rem;
+	}
+}
+
+%title-32 {
+	font-size: 2.5rem;
+	font-family: $f_equip-medium;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	@include media-up(tmd) {
+		font-size: 2rem;
+	}
+}
+
+%title-35 {
+	font-size: 2rem;
+	font-family: $f_equip-bold;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	@include media-up(tmd) {
+		font-size: 1.8rem;
+	}
+}
+
+%title-40 {
+	font-size: 2.25rem;
+	font-family: $f_equip-bold;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	@include media-up(tmd) {
+		font-size: 2rem;
+	}
+}
+
+%title-90 {
+	font-size: 4.5rem;
+	font-family: $f_equip-bold;
+	font-weight: bold;
+	text-transform: uppercase;
+	@include break-down(tsm);
+
+	@include media-up(tsm) {
+		font-size: 6rem;
+	}
+
+	@include media-up(tmd) {
+		font-size: 7rem;
+	}
+}
+
+%title-100 {
+	font-size: 4rem;
+	font-family: $f_equip-light;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	@include media-up(tmd) {
+		font-size: 5rem;
+	}
+}

@@ -1,0 +1,134 @@
+@import 'variables';
+@import 'functions';
+
+// ABSOLUTE CENTER-HORIZONTAL
+
+@mixin center-horizontal-vertical {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// CLEARFIX
+
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+%cover {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+@mixin ratio($height, $width) {
+	font-size: 0;
+	overflow: hidden;
+	position: relative;
+
+	&::after {
+		content: '';
+		display: inline-block;
+		padding-top: $width / $height * 100%;
+		width: 100%;
+	}
+}
+
+@mixin break-down($breakpoint) {
+	@include media-down($breakpoint) {
+		p {
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+// CUSTOM SCROLLBAR
+
+// @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+//   // For Google Chrome
+//   &::-webkit-scrollbar {
+//     width: $size;
+//     height: $size;
+//   }
+
+//   &::-webkit-scrollbar-thumb {
+//     background: $foreground-color;
+//   }
+
+//   &::-webkit-scrollbar-track {
+//     background: $background-color;
+//   }
+
+//   // For Internet Explorer
+//   & {
+//     scrollbar-face-color: $foreground-color;
+//     scrollbar-track-color: $background-color;
+//   }
+// }
+
+// Fonts
+@mixin font($font_directory, $font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		src: url('#{$font_directory}/#{$font_name}/#{$file_name}.woff2')
+				format('woff2'),
+			url('#{$font_directory}/#{$font_name}/#{$file_name}.woff') format('woff');
+		font-weight: #{$weight};
+		font-style: #{$style};
+		font-display: swap;
+	}
+}
+
+// Media queries
+@mixin media-up($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+@mixin media-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+@mixin media-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($lower, $breakpoints);
+	$max: breakpoint-max($upper, $breakpoints);
+
+	@media (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}
+
+@mixin media-only($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $min !=null and $max !=null {
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	}
+}

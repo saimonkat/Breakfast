@@ -1,0 +1,153 @@
+%body-18 {
+	font-size: 1.5rem;
+	font-family: $f_equip-thin;
+	font-weight: 100;
+
+	@include media-up(tmd) {
+		font-size: 1.2rem;
+	}
+}
+
+%body-22 {
+	font-size: 1.7rem;
+	font-family: $f_equip-thin;
+	font-weight: 100;
+
+	@include media-up(tmd) {
+		font-size: 1.4rem;
+	}
+}
+
+%body-30-light {
+	font-size: 2rem;
+	font-family: $f_equip-light;
+	font-weight: 300;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@include media-up(tmd) {
+		font-size: 1.8rem;
+	}
+}
+
+%body-30-bold {
+	font-size: 2rem;
+	font-family: $f_equip-bold;
+	font-weight: bold;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@include media-up(tmd) {
+		font-size: 1.8rem;
+	}
+}
+
+%body-40-light {
+	font-size: 2.25rem;
+	font-family: $f_equip-light;
+	font-weight: 300;
+	line-height: 1.5;
+
+	@include media-up(tmd) {
+		font-size: 2rem;
+	}
+}
+
+%body-40-reg {
+	font-size: 2.25rem;
+	font-family: $f_equip-regular;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 1.5;
+
+	@include media-up(tmd) {
+		font-size: 2rem;
+	}
+}
+
+%body-waves {
+	font-size: 2rem;
+	font-family: $f_equip-medium;
+	font-weight: 500;
+	text-transform: uppercase;
+	@include media-up(pmd) {
+		font-size: 2.25rem;
+	}
+	@include media-up(plg) {
+		font-size: 3rem;
+	}
+	@include media-up(tmd) {
+		font-size: 2rem;
+	}
+	@include media-up(dsm) {
+		font-size: 2.75rem;
+	}
+	@include media-up(dmd) {
+		font-size: 3rem;
+	}
+	@include media-up(dlg) {
+		font-size: 3.25rem;
+	}
+	@include media-up(bdsm) {
+		font-size: 2.75rem;
+	}
+}
+
+%body-40-med {
+	font-size: 2rem;
+	font-family: $f_equip-medium;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	@include media-up(dsm) {
+		font-size: 2.25rem;
+	}
+	@include media-up(dmd) {
+		font-size: 2.5rem;
+	}
+	@include media-up(dlg) {
+		font-size: 3rem;
+	}
+	@include media-up(bdsm) {
+		font-size: 2.75rem;
+	}
+}
+
+%body-50 {
+	font-size: 5rem;
+	font-family: $f_equip-light;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+%body-50-bold {
+	font-size: 2.25rem;
+	font-family: $f_equip-bold;
+	font-weight: bold;
+	text-transform: uppercase;
+	@include media-up(tmd) {
+		font-size: 2.5rem;
+	}
+	@include media-up(tlg) {
+		font-size: 3rem;
+	}
+}
+
+%body-60-light {
+	font-size: 3rem;
+	font-family: $f_equip-light;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+%body-100-light {
+	font-size: 3.5rem;
+	font-family: $f_equip-thin;
+	font-weight: 100;
+	line-height: 1.2;
+	text-transform: uppercase;
+
+	@include media-up(tmd) {
+		font-size: 6.5rem;
+	}
+}

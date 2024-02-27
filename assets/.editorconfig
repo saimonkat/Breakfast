@@ -1,0 +1,56 @@
+root = true
+
+# All files
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+trim_trailing_whitespace = true
+
+# HTML
+[*.{html,html,cshtml}]
+indent_style = tab
+indent_size  = 2
+
+# CSS, SCSS
+[*.{css,scss,cshtml}]
+indent_style = tab
+indent_size  = 2
+quote_type = single
+
+# JAVASCRIPT
+[*.{js,jsx}]
+indent_style = tab
+indent_size  = 2
+quote_type = single
+max_line_length = 120
+
+# PHP
+[*.php]
+indent_style = tab
+indent_size  = 2
+
+# JSON
+[*.json]
+indent_style = tab
+indent_size  = 2
+
+# ESLINT
+[*.eslintrc]
+indent_style = tab
+indent_size  = 2
+
+# STYLELING
+[*.stylelintrc]
+indent_style = tab
+indent_size  = 2
+
+# YAML
+[*.yaml]
+indent_style = tab
+indent_size  = 2
+
+# XML
+[*.{xml,svg}]
+indent_style = tab
+indent_size  = 2

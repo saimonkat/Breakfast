@@ -1,0 +1,19 @@
+.work {
+	&__text-scroll {
+		position: relative;
+		height: 100%;
+		padding: 20rem 0;
+		background-color: $g_blue-light;
+		margin-bottom: -30%;
+		color: $c_black;
+
+		@include media-up(tmd) {
+			padding: 15rem 0 25rem;
+			margin-bottom: -15%;
+		}
+
+		& .animated-text__container {
+			color: $c_black;
+		}
+	}
+}

@@ -1,0 +1,145 @@
+.home {
+	&__preloader {
+		position: fixed;
+		z-index: 10;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: $g_pink-dark;
+		background-image: linear-gradient(
+			165deg,
+			$g_orange-light,
+			$g_pink-dark 50%,
+			$g_pink-light 80%,
+			$g_lavender
+		);
+		pointer-events: none;
+		transition: opacity 0.5s;
+
+		body.animated & {
+			opacity: 0;
+		}
+	}
+
+	&__hero-wrapper {
+		position: relative;
+		z-index: 11;
+
+		body.animated & {
+			@include media-down(plg) {
+				z-index: unset;
+			}
+		}
+	}
+
+	&__middle-wrapper {
+		position: relative;
+		z-index: 12;
+		background-image: linear-gradient(
+			180deg,
+			transparent,
+			transparent 18%,
+			$g_pink-dark 28%,
+			$g_pink-light 60%,
+			$g_lavender 80%,
+			$g_blue-light
+		);
+		margin-top: -54%;
+
+		@include media-up(plg) {
+			// z-index: 0;
+			// margin-top: 0;
+		}
+
+		@include media-up(tsm) {
+			z-index: 0;
+			background-color: $g_pink-light;
+			background-image: linear-gradient(
+				160deg,
+				$g_lavender,
+				$g_pink-dark 25%,
+				$g_pink-light 60%,
+				$g_lavender 80%,
+				$g_blue-light
+			);
+			margin-top: -44%;
+		}
+
+		@include media-up(dsm) {
+			margin-top: -30%;
+		}
+	}
+
+	&__end-wrapper {
+		background-color: $g_lavender;
+		background-image: linear-gradient(
+			170deg,
+			$g_pink-dark 10%,
+			$g_pink-light 30%,
+			$g_lavender 60%,
+			$g_blue-dark-1
+		);
+	}
+
+	&__middle {
+		padding-top: 12%;
+		position: relative;
+
+		&__sticker {
+			position: absolute;
+			height: 15rem;
+			width: auto;
+			bottom: -5%;
+			right: 7.5%;
+
+			@include media-up(plg) {
+				bottom: 0;
+			}
+
+			@include media-up(tmd) {
+				height: 15rem;
+				bottom: 2%;
+				right: 7%;
+			}
+
+			@include media-up(tlg) {
+				height: 20rem;
+			}
+
+			@include media-up(dsm) {
+				height: 25rem;
+			}
+		}
+
+		&__copy {
+			padding-top: 7.5rem;
+			position: relative;
+			z-index: 5;
+			max-width: 90%;
+			margin: 0 auto;
+			@extend %body-100-light;
+			@include break-down(tmd);
+
+			@include media-up(tlg) {
+				max-width: 100%;
+			}
+		}
+		&__collage--baconophone {
+			margin-top: -20%;
+		}
+	}
+
+	&__work {
+		padding: 15rem 0 5rem 0;
+
+		&__copy {
+			color: $c_black;
+			padding: 2.5rem 0 7.5rem;
+			max-width: 90%;
+			margin: 0 auto;
+			@extend %body-100-light;
+			@include break-down(dsm);
+		}
+	}
+}
